@@ -1,0 +1,49 @@
+<html>
+  <link rel="stylesheet" type="text/css" href="Style.css" media="screen" />
+    <head>
+        <meta charset="UTF-8"/>
+        <title>JokenPo</title>
+    </head>
+    <body>
+        <h1>Vamos Brincar de JokenPo?</h1>
+        <form>
+            <p>Escolha sua Jogada</p>
+            <p>1 - Pedra </p>
+            <p>2 - Papel</p>
+            <p>3 - Tesoura</p>
+            <label for = "Jogador1"> Jogador 1:</label>
+            <br>
+            <input type="number" id="jogador1">
+            <br>
+            <label for = "Jogador2"> Jogador 2:</label>
+            <br>
+            <input type="number" id="jogador2">
+            <br>
+            <br>
+            <button onclick="btnJogar()">Jogar</button>
+            <button onclick="btnLimpar()">Limpar</button>
+            <br>
+            <script>
+                function btnJogar(){
+              var isvalid = true;
+              jogada1 = document.getElementById("jogador1").value;
+              jogada2 = document.getElementById("jogador2").value;
+              if ((jogada1 == 2 && jogada2 == 1) || (jogada1 == 1 && jogada2 == 3) || (jogada1 == 3 && jogada2 == 2))
+                {
+                  window.alert("Jogador 1 venceu !!!");
+              }
+              else if((jogada1 == 1 && jogada2 == 2) || (jogada1 == 3 && jogada2 == 1) || (jogada1 == 2 && jogada2 == 3))
+              {
+                window.alert("Jogador 2 venceu !!!");
+              }
+              else{
+                window.alert("Empatou !!!");
+              }
+            }
+            function btnLimpar(){
+                document.getElementById('ano').value='';
+            }
+            </script>
+      </form>
+    </body>
+</html>
